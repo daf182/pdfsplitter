@@ -16,7 +16,7 @@ function split_pdf_to_pages {
     do      
       `gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER \
          -dFirstPage=$i -dLastPage=$i \
-         -sOutputFile=${PDF_FILE_NAME}-$i.pdf ./$PDF_FILE_TO_SPLIT`
+         -sOutputFile=${PDF_FILE_NAME}-$i.pdf $PDF_FILE_TO_SPLIT`
          echo Page $i is split.
     done
 }
